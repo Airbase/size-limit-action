@@ -49,6 +49,7 @@ class Term {
     }
 
     await exec(`source .bashrc`)
+    await exec(`source .bashprofile`)
 
     if (skipStep !== INSTALL_STEP && skipStep !== BUILD_STEP) {
       await exec(`${manager} install`, [], {
