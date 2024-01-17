@@ -48,6 +48,9 @@ class Term {
       await exec(`git checkout -f ${branch}`);
     }
 
+    await exec(`source ~/.bashrc`)
+    await exec(`source ~/.bash_profile`)
+
     if (skipStep !== INSTALL_STEP && skipStep !== BUILD_STEP) {
       await exec(`${manager} install`, [], {
         cwd: directory
